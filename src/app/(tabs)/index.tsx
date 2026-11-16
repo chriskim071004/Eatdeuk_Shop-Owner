@@ -9,7 +9,7 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '잇득 사장님 | 빈 시간대를 기회로',
+    title: '잇득 사장님 | 손님이 뜸한 시간, 매출의 기회로.',
     description: '대학가 상권을 위한 오프라인 타임세일. 한산한 시간에 메뉴와 포인트 혜택을 등록해 매장 방문을 유도하는 잇득 사장님 사전등록.',
   };
 }
@@ -48,9 +48,9 @@ export default function HomeScreen() {
           <Text style={styles.badgeText}>대학가 음식점 사장님 대상 · 사전등록 진행 중</Text>
         </View>
         <Text style={styles.heroEyebrow}>OFFLINE TIME SALE · CAMPUS AREA</Text>
-        <Text style={styles.heroTitle}>한산한 시간,{'\n'}우리 가게의 기회로.</Text>
+        <Text style={styles.heroTitle}>손님이 뜸한 시간,{'\n'}매출의 기회로.</Text>
         <Text style={styles.heroDescription}>
-          잇득은 대학가 상권의 음식점이 한산한 시간대에 특정 메뉴와 포인트 적립 혜택을 등록하고, 매장 방문을 유도하는 오프라인 타임세일 플랫폼을 준비하고 있어요.
+          손님이 적은 시간대, 비어 있는 테이블이 아쉬우셨나요?{'\n'}잇득과 함께 새로운 고객을 만날 기회를 만들어보세요.
         </Text>
       </View>
 

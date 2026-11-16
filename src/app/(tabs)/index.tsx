@@ -48,9 +48,7 @@ export default function HomeScreen() {
           <Text style={styles.badgeText}>사장님을 위한 잇득 · 사전등록 진행 중</Text>
         </View>
         <Text style={styles.heroEyebrow}>EAT &amp; EARN FOR BUSINESS</Text>
-        <Text style={styles.heroTitle}>손님에게는 식사 혜택,{'
-'}사장님에게는{'
-'}새로운 기회를.</Text>
+        <Text style={styles.heroTitle}>손님에게는 식사 혜택,{'\n'}사장님에게는{'\n'}새로운 기회를.</Text>
         <Text style={styles.heroDescription}>
           손님은 맛있게 먹고 혜택을 쌓고, 사장님은 우리 가게를 알릴 기회를 얻는 서비스. 잇득이 사장님들의 의견을 기다립니다.
         </Text>
@@ -63,8 +61,7 @@ export default function HomeScreen() {
           </View>
           <Text style={styles.cardMark}>잇득</Text>
         </View>
-        <Text style={styles.mainCardTitle}>우리 가게도,{'
-'}잇득과 함께.</Text>
+        <Text style={styles.mainCardTitle}>우리 가게도,{'\n'}잇득과 함께.</Text>
         <Text style={styles.mainCardDescription}>
           정식 출시 전, 사장님들의 관심과 의견을 듣고 있어요. 간단한 설문으로 먼저 참여해보세요.
         </Text>
@@ -74,8 +71,7 @@ export default function HomeScreen() {
 
       <View style={styles.section}>
         <Text style={styles.sectionEyebrow}>WHY EATDEUK?</Text>
-        <Text style={styles.sectionTitle}>잇득이 준비하는{'
-'}사장님을 위한 경험</Text>
+        <Text style={styles.sectionTitle}>잇득이 준비하는{'\n'}사장님을 위한 경험</Text>
         <Text style={styles.sectionDescription}>
           지금은 컨셉을 검증하는 단계예요. 아래 내용은 준비 중인 서비스 방향입니다.
         </Text>
@@ -126,8 +122,7 @@ export default function HomeScreen() {
 
       <View style={styles.lastCard}>
         <Text style={styles.lastEyebrow}>함께 시작할 사장님을 찾고 있어요</Text>
-        <Text style={styles.lastTitle}>잇득의 첫걸음에{'
-'}함께해 주세요.</Text>
+        <Text style={styles.lastTitle}>잇득의 첫걸음에{'\n'}함께해 주세요.</Text>
         <Text style={styles.lastDescription}>
           초기 참여 관련 혜택과 운영 조건은 아직 확정 전이며, 의견을 바탕으로 구체화할 예정입니다.
         </Text>

@@ -39,8 +39,7 @@ export default function GuideScreen() {
 
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>FOR RESTAURANT OWNERS</Text>
-        <Text style={styles.title}>사장님을 위한{'
-'}잇득 입점 안내</Text>
+        <Text style={styles.title}>사장님을 위한{'\n'}잇득 입점 안내</Text>
         <Text style={styles.description}>
           잇득은 현재 음식점 사장님들의 관심을 확인하고 있어요. 정식 계약이 아닌, 간단한 사전등록 설문부터 시작합니다.
         </Text>

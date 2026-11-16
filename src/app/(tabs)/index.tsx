@@ -9,16 +9,16 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '잇득 사장님 | 비어있는 시간, 매출의 기회로.',
-    description: '비어있는 시간을 매출의 기회로. 대학가 상권을 위한 오프라인 타임세일 잇득의 매장 입점 안내.',
+    title: '잇득 사장님 | 대학가 오프라인 타임세일',
+    description: '손님이 적은 시간에도 새로운 고객을 만날 기회. 대학가 상권을 위한 오프라인 타임세일 잇득의 매장 입점 안내.',
   };
 }
 
 const reasons = [
   {
     number: '01',
-    title: '비어있는 시간대를 활용',
-    description: '매장 방문이 적은 시간대를 골라 메뉴 혜택을 운영하는 방식으로 매장의 비어있는 시간을 활용합니다.',
+    title: '필요한 시간대에만 타임세일',
+    description: '손님이 뜸한 시간에만 포인트 혜택을 설정해 가게 운영에 맞춰 활용하는 방식입니다.',
   },
   {
     number: '02',
@@ -33,7 +33,7 @@ const reasons = [
 ] as const;
 
 const steps = [
-  { number: '1', title: '비어있는 시간대 선택', body: '우리 가게에서 활용하고 싶은 시간대를 선택해요.' },
+  { number: '1', title: '타임세일 시간대 선택', body: '방문이 적은 시간 중 원하는 시간대를 정해요.' },
   { number: '2', title: '메뉴와 포인트 혜택 등록', body: '해당 시간에 제공할 메뉴와 적립 포인트를 정해요.' },
   { number: '3', title: '대학가 상권에 메뉴 홍보', body: '잇득에서 메뉴를 알리고 방문을 유도하는 방식이에요.' },
 ] as const;
@@ -61,19 +61,18 @@ export default function HomeScreen() {
           </View>
           <Text style={styles.cardMark}>잇득</Text>
         </View>
-        <Text style={styles.mainCardTitle}>비어있는 시간,{'\n'}그냥 흘려보내지 마세요.</Text>
+        <Text style={styles.mainCardTitle}>놓치고 있던 시간,{'\n'}가게를 알릴 기회로.</Text>
         <Text style={styles.mainCardDescription}>
           우리 가게의 시간대와 메뉴에 맞는 포인트 혜택을 활용해 대학가 상권에 매장을 알리는 방법. 잇득 입점 신청으로 시작해 보세요.
         </Text>
         <CtaButton label="잇득 입점 신청하기" theme="white" />
-        <Text style={styles.cardNote}>입점 신청 설문으로 이동합니다. 제출만으로 입점이 확정되지는 않습니다.</Text>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionEyebrow}>WHY EATDEUK?</Text>
-        <Text style={styles.sectionTitle}>비어있는 시간과{'\n'}대학가 상권에 집중합니다</Text>
+        <Text style={styles.sectionTitle}>원하는 시간에 혜택을,{'\n'}대학가에 홍보를.</Text>
         <Text style={styles.sectionDescription}>
-          잇득은 음식점의 비어있는 시간대를 활용하는 오프라인 타임세일과 대학가 상권 홍보에 집중합니다.
+          잇득은 방문이 적은 시간대의 메뉴 혜택과 대학가 상권 홍보를 연결하는 오프라인 타임세일 플랫폼입니다.
         </Text>
         <View style={styles.reasonList}>
           {reasons.map((reason) => (
@@ -123,16 +122,16 @@ export default function HomeScreen() {
 
       <View style={styles.lastCard}>
         <Text style={styles.lastEyebrow}>대학가 상권 음식점 입점 안내</Text>
-        <Text style={styles.lastTitle}>비어있는 시간을,{'\n'}매출의 기회로.</Text>
+        <Text style={styles.lastTitle}>우리 가게의 새로운 기회,{'\n'}잇득에서 시작해요.</Text>
         <Text style={styles.lastDescription}>
-          우리 가게의 비어있는 시간을 활용하는 새로운 방법. 잇득 입점 신청으로 관심을 알려주세요. 세부 운영 조건은 아직 확정되지 않았습니다.
+          손님이 적을 때도 메뉴를 알릴 새로운 방법을 찾고 계신가요? 잇득 입점 신청으로 관심을 알려주세요. 세부 운영 조건은 아직 확정되지 않았습니다.
         </Text>
         <CtaButton label="우리 가게 입점 신청하기" />
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
-        <Text style={styles.footerText}>비어있는 시간을 기회로.</Text>
+        <Text style={styles.footerText}>대학가 오프라인 타임세일</Text>
         <Text style={styles.footerDisclaimer}>
           현재는 입점 신청을 통해 참여 의향을 확인하는 단계입니다. 타임세일 메뉴 등록, 매장 홍보 및 포인트 적립 기능은 아직 운영되지 않으며, 방문·매출 성과를 보장하지 않습니다.
         </Text>
@@ -185,7 +184,6 @@ const styles = StyleSheet.create({
   cardMark: { color: '#DDE9FF', fontSize: 15, fontWeight: '900' },
   mainCardTitle: { marginTop: 26, color: '#FFFFFF', fontSize: 30, lineHeight: 39, fontWeight: '900', letterSpacing: -0.6 },
   mainCardDescription: { marginTop: 13, marginBottom: 24, color: '#E3EDFF', fontSize: 14, lineHeight: 23 },
-  cardNote: { marginTop: 13, color: '#E3EDFF', fontSize: 11, lineHeight: 17 },
   section: { marginTop: 57 },
   sectionEyebrow: { color: BrandColors.primary, fontSize: 12, fontWeight: '900', letterSpacing: 1.0 },
   sectionTitle: { marginTop: 9, color: BrandColors.text, fontSize: 25, fontWeight: '900', lineHeight: 34, letterSpacing: -0.6 },

@@ -8,7 +8,7 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '잇득 입점 안내 | 비어있는 시간을 기회로',
+    title: '잇득 입점 안내 | 대학가 오프라인 타임세일',
     description: '대학가 상권을 위한 오프라인 타임세일, 잇득의 매장 입점 안내 및 이용 방법.',
   };
 }
@@ -16,11 +16,11 @@ export function generateMetadata(): Metadata {
 const faqs = [
   {
     question: '잇득은 어떤 서비스인가요?',
-    answer: '음식점의 비어있는 시간대에 메뉴와 포인트 적립 혜택을 설정하고 대학가 상권에 매장을 알리는 오프라인 타임세일 서비스입니다. 실제 운영 기능은 준비 중입니다.',
+    answer: '음식점이 손님이 적은 시간대에 메뉴와 포인트 적립 혜택을 설정하고 대학가 상권에 매장을 알리는 오프라인 타임세일 서비스입니다. 실제 운영 기능은 준비 중입니다.',
   },
   {
     question: '어떤 시간대에 활용할 수 있나요?',
-    answer: '매장 방문이 적은 비어있는 시간대를 사장님이 선택하는 방식을 준비하고 있습니다. 운영 가능한 시간과 조건은 아직 확정되지 않았습니다.',
+    answer: '사장님이 매장 방문이 적은 시간대를 직접 선택하는 방식을 준비하고 있습니다. 운영 가능한 시간과 조건은 아직 확정되지 않았습니다.',
   },
   {
     question: '메뉴와 포인트는 어떻게 등록하나요?',
@@ -51,9 +51,9 @@ export default function GuideScreen() {
 
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>OFFLINE TIME SALE FOR OWNERS</Text>
-        <Text style={styles.title}>비어있는 시간대를{'\n'}활용하는 방법</Text>
+        <Text style={styles.title}>우리 가게의 타임세일,{'\n'}이렇게 시작해요.</Text>
         <Text style={styles.description}>
-          비어있는 시간대를 골라 메뉴와 포인트 적립 혜택을 설정하고, 대학가 상권에 매장을 알리는 잇득의 이용 방식을 소개합니다.
+          원하는 시간대에 메뉴와 포인트 적립 혜택을 설정하고, 대학가 상권에 매장을 알리는 잇득의 이용 방식을 소개합니다.
         </Text>
       </View>
 
@@ -73,7 +73,7 @@ export default function GuideScreen() {
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>1</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>비어있는 시간대 선택</Text>
+              <Text style={styles.processTitle}>타임세일 시간대 선택</Text>
               <Text style={styles.processText}>우리 가게에서 활용하고 싶은 시간대를 정합니다.</Text>
             </View>
           </View>
@@ -112,15 +112,14 @@ export default function GuideScreen() {
       </View>
 
       <View style={styles.bottomCard}>
-        <Text style={styles.bottomTitle}>비어있는 시간, 매출의 기회로.</Text>
-        <Text style={styles.bottomDescription}>대학가 상권에서 비어있는 시간을 활용하고 싶다면 잇득 입점 신청으로 시작해 보세요.</Text>
+        <Text style={styles.bottomTitle}>우리 가게에 맞춘 홍보, 잇득으로.</Text>
+        <Text style={styles.bottomDescription}>손님이 적은 시간에도 메뉴를 알리고 싶다면 잇득 입점 신청으로 시작해 보세요.</Text>
         <CtaButton label="잇득 입점 신청하기" />
-        <Text style={styles.disclaimer}>입점 신청서(Google 설문)로 이동합니다. 제출만으로 입점이 확정되지는 않습니다.</Text>
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
-        <Text style={styles.footerText}>비어있는 시간을 기회로.</Text>
+        <Text style={styles.footerText}>대학가 오프라인 타임세일</Text>
         <Text style={styles.footerNote}>실제 메뉴 등록·포인트 적립 기능은 준비 중입니다.</Text>
       </View>
     </PageScrollView>
@@ -156,7 +155,6 @@ const styles = StyleSheet.create({
   bottomCard: { marginTop: 54, padding: 22, backgroundColor: BrandColors.primarySoft, borderRadius: Layout.cardRadius },
   bottomTitle: { color: BrandColors.text, fontSize: 23, fontWeight: '900', lineHeight: 32 },
   bottomDescription: { color: BrandColors.textSecondary, fontSize: 13, lineHeight: 21, marginTop: 10, marginBottom: 22 },
-  disclaimer: { color: BrandColors.textSecondary, marginTop: 12, fontSize: 11, lineHeight: 18 },
   footer: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', columnGap: 9, rowGap: 8, marginTop: 49, borderTopColor: BrandColors.border, borderTopWidth: 1, paddingTop: 20 },
   footerBrand: { fontSize: 14, fontWeight: '900', color: BrandColors.text },
   footerText: { fontSize: 12, color: BrandColors.textMuted },

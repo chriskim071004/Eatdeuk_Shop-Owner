@@ -38,10 +38,6 @@ const faqs = [
     question: '입점 신청에 비용이 있나요?',
     answer: '입점 신청서 제출만으로 결제나 계약은 진행되지 않습니다. 실제 서비스 이용요금과 수수료는 아직 확정되지 않았습니다.',
   },
-  {
-    question: '로그인 버튼은 무엇인가요?',
-    answer: '현재 로그인 기능은 제공되지 않습니다. 로그인과 입점 신청 버튼은 모두 입점 신청 설문으로 연결됩니다.',
-  },
 ] as const;
 
 export default function GuideScreen() {

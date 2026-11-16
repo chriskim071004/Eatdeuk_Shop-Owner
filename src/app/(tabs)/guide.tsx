@@ -8,39 +8,39 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '사장님 타임세일 안내 | 잇득',
-    description: '한산한 시간대에 메뉴와 포인트 적립 혜택을 등록하는 대학가 오프라인 타임세일의 운영 구상과 사전등록 안내입니다.',
+    title: '잇득 입점 안내 | 비어있는 시간을 기회로',
+    description: '대학가 상권을 위한 오프라인 타임세일, 잇득의 매장 입점 안내 및 이용 방법.',
   };
 }
 
 const faqs = [
   {
     question: '잇득은 어떤 서비스인가요?',
-    answer: '사장님이 한산한 시간대를 정하고 특정 메뉴의 포인트 적립 혜택을 등록해, 대학가 상권에서 매장을 홍보하고 방문을 유도하는 오프라인 타임세일 플랫폼을 구상하고 있습니다.',
+    answer: '음식점의 비어있는 시간대에 메뉴와 포인트 적립 혜택을 설정하고 대학가 상권에 매장을 알리는 오프라인 타임세일 서비스입니다. 실제 운영 기능은 준비 중입니다.',
   },
   {
     question: '어떤 시간대에 활용할 수 있나요?',
-    answer: '점심과 저녁 사이처럼 매장이 한가한 시간대를 사장님이 직접 선택하는 방식을 준비하고 있어요. 구체적인 운영 시간 설정 기능은 정식 출시 전 검토 중입니다.',
+    answer: '매장 방문이 적은 비어있는 시간대를 사장님이 선택하는 방식을 준비하고 있습니다. 운영 가능한 시간과 조건은 아직 확정되지 않았습니다.',
   },
   {
     question: '메뉴와 포인트는 어떻게 등록하나요?',
-    answer: '사장님이 타임세일에 참여할 메뉴와 포인트 적립 조건을 설정하는 구조를 구상 중입니다. 아직 실제 등록 기능이나 적립·정산 시스템이 열려 있지는 않습니다.',
+    answer: '메뉴와 포인트 적립 조건을 설정하는 기능은 준비 중입니다. 현재는 입점 신청서를 통해 참여 의향을 알려주실 수 있습니다.',
   },
   {
     question: '대학가 홍보는 어떻게 진행되나요?',
-    answer: '대학가 상권을 중심으로 잇득 플랫폼에서 등록된 메뉴를 알리는 방향입니다. 구체적인 홍보 채널과 노출 방식은 아직 확정되지 않았습니다.',
+    answer: '대학가 상권에 잇득의 타임세일 메뉴를 알리는 방향입니다. 구체적인 홍보 채널과 노출 방식은 아직 확정되지 않았습니다.',
   },
   {
-    question: '지금 사전등록하면 바로 입점되나요?',
-    answer: '아니요. 현재는 참여 의향을 확인하는 프리토타입 단계입니다. 설문 제출은 입점 계약이나 실제 타임세일 운영을 의미하지 않습니다.',
+    question: '입점 신청하면 바로 이용할 수 있나요?',
+    answer: '현재는 실제 메뉴 등록과 포인트 운영 전 단계입니다. 신청서 제출만으로 입점이나 계약이 확정되지 않으며, 다음 절차는 추후 안내됩니다.',
   },
   {
-    question: '사전등록에 비용이나 수수료가 있나요?',
-    answer: '설문 참여만으로 결제나 입점 계약이 진행되지는 않습니다. 실제 서비스의 요금·수수료·운영 조건은 아직 정해지지 않았습니다.',
+    question: '입점 신청에 비용이 있나요?',
+    answer: '입점 신청서 제출만으로 결제나 계약은 진행되지 않습니다. 실제 서비스 이용요금과 수수료는 아직 확정되지 않았습니다.',
   },
   {
     question: '로그인 버튼은 무엇인가요?',
-    answer: '현재는 로그인 기능이 구현되지 않아 로그인과 신청 버튼 모두 사장님 사전등록 설문으로 연결됩니다.',
+    answer: '현재 로그인 기능은 제공되지 않습니다. 로그인과 입점 신청 버튼은 모두 입점 신청 설문으로 연결됩니다.',
   },
 ] as const;
 
@@ -51,48 +51,48 @@ export default function GuideScreen() {
 
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>OFFLINE TIME SALE FOR OWNERS</Text>
-        <Text style={styles.title}>한산한 시간대를{'\n'}활용하는 방법</Text>
+        <Text style={styles.title}>비어있는 시간대를{'\n'}활용하는 방법</Text>
         <Text style={styles.description}>
-          사장님이 빈 시간대를 골라 메뉴와 포인트 적립 혜택을 등록하면, 대학가 상권에 메뉴를 알리고 매장 방문을 유도하는 구조를 준비하고 있어요.
+          비어있는 시간대를 골라 메뉴와 포인트 적립 혜택을 설정하고, 대학가 상권에 매장을 알리는 잇득의 이용 방식을 소개합니다.
         </Text>
       </View>
 
       <View style={styles.summaryCard}>
-        <Text style={styles.summaryEyebrow}>현재 진행 중인 단계</Text>
-        <Text style={styles.summaryTitle}>우리 가게 사전등록</Text>
+        <Text style={styles.summaryEyebrow}>잇득 입점 안내</Text>
+        <Text style={styles.summaryTitle}>우리 가게 입점 신청</Text>
         <Text style={styles.summaryDescription}>
-          아직 메뉴 등록과 타임세일 운영 기능은 열려 있지 않아요. Google 설문으로 매장 상황과 참여 의향을 알려주시면 서비스 검증에 참고하겠습니다.
+          오프라인 타임세일에 관심이 있다면 입점 신청서를 작성해 주세요. 현재 신청서를 통해 참여 의향을 확인하고 있으며, 메뉴 등록 기능은 준비 중입니다.
         </Text>
-        <CtaButton label="사전등록 설문 작성하기" theme="white" />
+        <CtaButton label="입점 신청서 작성하기" theme="white" />
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionEyebrow}>PROCESS</Text>
-        <Text style={styles.sectionTitle}>정식 서비스의 이용 흐름</Text>
+        <Text style={styles.sectionTitle}>잇득 이용 방법</Text>
         <View style={styles.processCard}>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>1</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>한가한 시간대 지정</Text>
-              <Text style={styles.processText}>매장에 방문이 뜸한 시간대를 직접 선택합니다.</Text>
+              <Text style={styles.processTitle}>비어있는 시간대 선택</Text>
+              <Text style={styles.processText}>우리 가게에서 활용하고 싶은 시간대를 정합니다.</Text>
             </View>
           </View>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>2</Text></View>
             <View style={styles.processBody}>
               <Text style={styles.processTitle}>메뉴·포인트 혜택 등록</Text>
-              <Text style={styles.processText}>특정 시간에 제공할 메뉴와 적립 혜택을 등록합니다.</Text>
+              <Text style={styles.processText}>해당 시간에 제공할 메뉴와 적립 포인트를 설정합니다.</Text>
             </View>
           </View>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>3</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>대학가 상권에 노출</Text>
-              <Text style={styles.processText}>잇득에서 등록한 메뉴를 알리고 오프라인 방문을 유도합니다.</Text>
+              <Text style={styles.processTitle}>대학가 상권에 메뉴 홍보</Text>
+              <Text style={styles.processText}>매장과 등록된 메뉴를 알리고 오프라인 방문을 유도합니다.</Text>
             </View>
           </View>
         </View>
-        <Text style={styles.processCaveat}>※ 위 내용은 준비 중인 운영 구상이며, 현재는 사전등록 설문만 진행하고 있습니다.</Text>
+        <Text style={styles.processCaveat}>※ 위 단계는 준비 중인 이용 방식이며, 현재는 입점 신청 설문만 받고 있습니다.</Text>
       </View>
 
       <View style={styles.section}>
@@ -112,16 +112,16 @@ export default function GuideScreen() {
       </View>
 
       <View style={styles.bottomCard}>
-        <Text style={styles.bottomTitle}>한산한 시간, 잇득과 함께 준비해요</Text>
-        <Text style={styles.bottomDescription}>대학가 상권에서 빈 시간대 유입을 고민하고 있다면 사전등록 설문으로 의견을 남겨주세요.</Text>
-        <CtaButton label="우리 가게 사전등록하기" />
-        <Text style={styles.disclaimer}>외부 Google 설문으로 이동합니다. 설문 제출은 입점 확정이 아닙니다.</Text>
+        <Text style={styles.bottomTitle}>비어있는 시간, 매출의 기회로.</Text>
+        <Text style={styles.bottomDescription}>대학가 상권에서 비어있는 시간을 활용하고 싶다면 잇득 입점 신청으로 시작해 보세요.</Text>
+        <CtaButton label="잇득 입점 신청하기" />
+        <Text style={styles.disclaimer}>입점 신청서(Google 설문)로 이동합니다. 제출만으로 입점이 확정되지는 않습니다.</Text>
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
-        <Text style={styles.footerText}>빈 시간을 기회로.</Text>
-        <Text style={styles.footerNote}>현재 타임세일 운영 전 수요 검증 단계입니다.</Text>
+        <Text style={styles.footerText}>비어있는 시간을 기회로.</Text>
+        <Text style={styles.footerNote}>실제 메뉴 등록·포인트 적립 기능은 준비 중입니다.</Text>
       </View>
     </PageScrollView>
   );

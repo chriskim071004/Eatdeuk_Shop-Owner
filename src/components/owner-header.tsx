@@ -10,7 +10,7 @@ export function OwnerHeader() {
       <BrandHeader />
       <Pressable
         accessibilityRole="link"
-        accessibilityHint="현재 로그인 대신 사장님 사전등록 설문으로 이동합니다"
+        accessibilityHint="현재 로그인 대신 입점 신청 설문으로 이동합니다"
         onPress={() => { void Linking.openURL(OWNER_INTEREST_FORM_URL); }}
         style={({ pressed }) => [styles.login, pressed && styles.pressed]}>
         <Text style={styles.loginText}>로그인</Text>

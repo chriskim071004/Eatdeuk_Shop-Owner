@@ -9,33 +9,33 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '잇득 사장님 | 손님이 뜸한 시간, 매출의 기회로.',
-    description: '대학가 상권을 위한 오프라인 타임세일. 한산한 시간에 메뉴와 포인트 혜택을 등록해 매장 방문을 유도하는 잇득 사장님 사전등록.',
+    title: '잇득 사장님 | 비어있는 시간, 매출의 기회로.',
+    description: '비어있는 시간을 매출의 기회로. 대학가 상권을 위한 오프라인 타임세일 잇득의 매장 입점 안내.',
   };
 }
 
 const reasons = [
   {
     number: '01',
-    title: '한산한 시간대를 활용',
-    description: '우리 가게가 한가한 시간대를 선택해 해당 시간에만 혜택을 운영하는 방식입니다.',
+    title: '비어있는 시간대를 활용',
+    description: '매장 방문이 적은 시간대를 골라 메뉴 혜택을 운영하는 방식으로 매장의 비어있는 시간을 활용합니다.',
   },
   {
     number: '02',
-    title: '메뉴 등록으로 매장 방문 유도',
-    description: '원하는 메뉴와 포인트 적립 혜택을 잇득에 등록해 오프라인 방문을 유도하도록 설계하고 있어요.',
+    title: '우리 가게 메뉴에 포인트 혜택',
+    description: '원하는 메뉴에 포인트 적립 혜택을 더해 오프라인 방문을 유도하는 구조입니다.',
   },
   {
     number: '03',
     title: '대학가 상권 집중 홍보',
-    description: '대학가 주변 상권에서 가게와 타임세일 메뉴를 알리는 홍보 방식을 준비 중이에요.',
+    description: '대학가 주변 상권에 매장과 타임세일 메뉴를 알릴 수 있는 홍보 방식을 지향합니다.',
   },
 ] as const;
 
 const steps = [
-  { number: '1', title: '한산한 시간대 선택', body: '우리 가게에 방문이 뜸한 시간대를 선택해요.' },
-  { number: '2', title: '메뉴와 포인트 혜택 등록', body: '해당 시간에 제공할 메뉴와 적립 혜택을 정해요.' },
-  { number: '3', title: '대학가 상권에 메뉴 알리기', body: '잇득에서 메뉴를 소개하고 매장 방문을 유도하는 구조예요.' },
+  { number: '1', title: '비어있는 시간대 선택', body: '우리 가게에서 활용하고 싶은 시간대를 선택해요.' },
+  { number: '2', title: '메뉴와 포인트 혜택 등록', body: '해당 시간에 제공할 메뉴와 적립 포인트를 정해요.' },
+  { number: '3', title: '대학가 상권에 메뉴 홍보', body: '잇득에서 메뉴를 알리고 방문을 유도하는 방식이에요.' },
 ] as const;
 
 export default function HomeScreen() {
@@ -45,10 +45,10 @@ export default function HomeScreen() {
 
       <View style={styles.hero}>
         <View style={styles.badge}>
-          <Text style={styles.badgeText}>대학가 음식점 사장님 대상 · 사전등록 진행 중</Text>
+          <Text style={styles.badgeText}>대학가 음식점 사장님을 위한 오프라인 타임세일</Text>
         </View>
         <Text style={styles.heroEyebrow}>OFFLINE TIME SALE · CAMPUS AREA</Text>
-        <Text style={styles.heroTitle}>손님이 뜸한 시간,{'\n'}매출의 기회로.</Text>
+        <Text style={styles.heroTitle}>비어있는 시간,{'\n'}매출의 기회로.</Text>
         <Text style={styles.heroDescription}>
           손님이 적은 시간대, 비어 있는 테이블이 아쉬우셨나요?{'\n'}잇득과 함께 새로운 고객을 만날 기회를 만들어보세요.
         </Text>
@@ -57,23 +57,23 @@ export default function HomeScreen() {
       <View style={styles.mainCard}>
         <View style={styles.mainCardTop}>
           <View style={styles.cardPill}>
-            <Text style={styles.cardPillText}>OWNER PRE-REGISTRATION</Text>
+            <Text style={styles.cardPillText}>EATDEUK FOR BUSINESS</Text>
           </View>
           <Text style={styles.cardMark}>잇득</Text>
         </View>
-        <Text style={styles.mainCardTitle}>빈 시간대,{'\n'}그냥 비워두지 마세요.</Text>
+        <Text style={styles.mainCardTitle}>비어있는 시간,{'\n'}그냥 흘려보내지 마세요.</Text>
         <Text style={styles.mainCardDescription}>
-          한가한 시간을 활용해 우리 가게를 홍보하고 싶다면, 간단한 설문으로 잇득의 사전등록에 참여해 주세요.
+          우리 가게의 시간대와 메뉴에 맞는 포인트 혜택을 활용해 대학가 상권에 매장을 알리는 방법. 잇득 입점 신청으로 시작해 보세요.
         </Text>
-        <CtaButton label="우리 가게 사전등록하기" theme="white" />
-        <Text style={styles.cardNote}>Google 설문으로 이동 · 현재는 수요 조사 단계이며 입점은 확정되지 않습니다.</Text>
+        <CtaButton label="잇득 입점 신청하기" theme="white" />
+        <Text style={styles.cardNote}>입점 신청 설문으로 이동합니다. 제출만으로 입점이 확정되지는 않습니다.</Text>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionEyebrow}>WHY EATDEUK?</Text>
-        <Text style={styles.sectionTitle}>한산한 시간과{'\n'}대학가 상권에 집중합니다</Text>
+        <Text style={styles.sectionTitle}>비어있는 시간과{'\n'}대학가 상권에 집중합니다</Text>
         <Text style={styles.sectionDescription}>
-          대학가 주변의 음식점이 빈 시간대를 활용할 수 있도록 구상한 잇득의 핵심 방식입니다. 현재는 서비스 검증 단계예요.
+          잇득은 음식점의 비어있는 시간대를 활용하는 오프라인 타임세일과 대학가 상권 홍보에 집중합니다.
         </Text>
         <View style={styles.reasonList}>
           {reasons.map((reason) => (
@@ -94,7 +94,7 @@ export default function HomeScreen() {
         <View style={styles.sectionHeadingRow}>
           <View style={styles.sectionHeadingContent}>
             <Text style={styles.sectionEyebrow}>HOW IT WORKS</Text>
-            <Text style={styles.sectionTitle}>잇득은 이렇게 작동해요</Text>
+            <Text style={styles.sectionTitle}>잇득은 이렇게 활용해요</Text>
           </View>
           <Pressable
             accessibilityRole="button"
@@ -104,7 +104,7 @@ export default function HomeScreen() {
             <Text style={styles.moreButtonText}>+</Text>
           </Pressable>
         </View>
-        <Text style={styles.sectionDescription}>아래는 정식 서비스에서 제공하려는 운영 방식이며, 현재는 사전등록 조사 단계입니다.</Text>
+        <Text style={styles.sectionDescription}>아래는 잇득이 준비 중인 이용 방식입니다. 메뉴 등록과 포인트 기능은 아직 제공되지 않습니다.</Text>
         <View style={styles.steps}>
           {steps.map((step, index) => (
             <View key={step.number} style={styles.step}>
@@ -122,19 +122,19 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.lastCard}>
-        <Text style={styles.lastEyebrow}>대학가 상권 사장님 사전등록</Text>
-        <Text style={styles.lastTitle}>비어 있는 시간대,{'\n'}새로운 기회로 바꿔보세요.</Text>
+        <Text style={styles.lastEyebrow}>대학가 상권 음식점 입점 안내</Text>
+        <Text style={styles.lastTitle}>비어있는 시간을,{'\n'}매출의 기회로.</Text>
         <Text style={styles.lastDescription}>
-          우리 가게의 한산한 시간대를 활용할 타임세일 방식에 관심이 있다면 의견을 남겨주세요. 세부 운영 조건과 초기 등록 혜택은 검토 중입니다.
+          우리 가게의 비어있는 시간을 활용하는 새로운 방법. 잇득 입점 신청으로 관심을 알려주세요. 세부 운영 조건은 아직 확정되지 않았습니다.
         </Text>
-        <CtaButton label="사장님 사전등록 설문 참여" />
+        <CtaButton label="우리 가게 입점 신청하기" />
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
-        <Text style={styles.footerText}>빈 시간을 기회로.</Text>
+        <Text style={styles.footerText}>비어있는 시간을 기회로.</Text>
         <Text style={styles.footerDisclaimer}>
-          잇득은 출시 전 수요 검증을 진행 중입니다. 현재 타임세일 등록, 매장 홍보, 포인트 적립 등의 실제 서비스는 운영되지 않으며 방문·매출 성과를 보장하지 않습니다.
+          현재는 입점 신청을 통해 참여 의향을 확인하는 단계입니다. 타임세일 메뉴 등록, 매장 홍보 및 포인트 적립 기능은 아직 운영되지 않으며, 방문·매출 성과를 보장하지 않습니다.
         </Text>
       </View>
     </PageScrollView>

@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "잇득 사장님",
+    "slug": "eatdeuk-shop-owner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "eatdeuk-shop-owner",
+    "userInterfaceStyle": "light",
+    "web": {
+      "output": "static"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

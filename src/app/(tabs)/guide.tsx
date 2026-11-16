@@ -8,27 +8,39 @@ import { BrandColors, Layout } from '@/constants/brand';
 
 export function generateMetadata(): Metadata {
   return {
-    title: '사장님 입점 안내 | 잇득',
-    description: '잇득 사장님 사전등록 방법과 자주 묻는 질문을 확인하세요.',
+    title: '사장님 타임세일 안내 | 잇득',
+    description: '한산한 시간대에 메뉴와 포인트 적립 혜택을 등록하는 대학가 오프라인 타임세일의 운영 구상과 사전등록 안내입니다.',
   };
 }
 
 const faqs = [
   {
-    question: '지금 바로 잇득에 입점할 수 있나요?',
-    answer: '아직 정식 운영 전입니다. 현재 사장님들의 참여 의향을 확인하는 프리토타입 단계이며, 설문 제출은 입점 확정이 아닙니다.',
+    question: '잇득은 어떤 서비스인가요?',
+    answer: '사장님이 한산한 시간대를 정하고 특정 메뉴의 포인트 적립 혜택을 등록해, 대학가 상권에서 매장을 홍보하고 방문을 유도하는 오프라인 타임세일 플랫폼을 구상하고 있습니다.',
   },
   {
-    question: '사전등록에 비용이 드나요?',
-    answer: '설문 참여 자체로 결제나 입점 계약이 진행되지는 않습니다. 실제 서비스 이용요금과 운영 조건은 아직 정해지지 않았습니다.',
+    question: '어떤 시간대에 활용할 수 있나요?',
+    answer: '점심과 저녁 사이처럼 매장이 한가한 시간대를 사장님이 직접 선택하는 방식을 준비하고 있어요. 구체적인 운영 시간 설정 기능은 정식 출시 전 검토 중입니다.',
   },
   {
-    question: '초기 등록 혜택은 무엇인가요?',
-    answer: '초기 참여 매장에 제공할 혜택은 현재 검토 중입니다. 확정되지 않은 무료 이용 기간이나 매출 효과를 보장하지 않습니다.',
+    question: '메뉴와 포인트는 어떻게 등록하나요?',
+    answer: '사장님이 타임세일에 참여할 메뉴와 포인트 적립 조건을 설정하는 구조를 구상 중입니다. 아직 실제 등록 기능이나 적립·정산 시스템이 열려 있지는 않습니다.',
   },
   {
-    question: '로그인 버튼을 누르면 어떻게 되나요?',
-    answer: '현재 로그인 기능은 구현되어 있지 않습니다. 로그인과 신청 버튼은 모두 사장님 참여 의향 설문으로 연결됩니다.',
+    question: '대학가 홍보는 어떻게 진행되나요?',
+    answer: '대학가 상권을 중심으로 잇득 플랫폼에서 등록된 메뉴를 알리는 방향입니다. 구체적인 홍보 채널과 노출 방식은 아직 확정되지 않았습니다.',
+  },
+  {
+    question: '지금 사전등록하면 바로 입점되나요?',
+    answer: '아니요. 현재는 참여 의향을 확인하는 프리토타입 단계입니다. 설문 제출은 입점 계약이나 실제 타임세일 운영을 의미하지 않습니다.',
+  },
+  {
+    question: '사전등록에 비용이나 수수료가 있나요?',
+    answer: '설문 참여만으로 결제나 입점 계약이 진행되지는 않습니다. 실제 서비스의 요금·수수료·운영 조건은 아직 정해지지 않았습니다.',
+  },
+  {
+    question: '로그인 버튼은 무엇인가요?',
+    answer: '현재는 로그인 기능이 구현되지 않아 로그인과 신청 버튼 모두 사장님 사전등록 설문으로 연결됩니다.',
   },
 ] as const;
 
@@ -38,48 +50,49 @@ export default function GuideScreen() {
       <OwnerHeader />
 
       <View style={styles.hero}>
-        <Text style={styles.eyebrow}>FOR RESTAURANT OWNERS</Text>
-        <Text style={styles.title}>사장님을 위한{'\n'}잇득 입점 안내</Text>
+        <Text style={styles.eyebrow}>OFFLINE TIME SALE FOR OWNERS</Text>
+        <Text style={styles.title}>한산한 시간대를{'\n'}활용하는 방법</Text>
         <Text style={styles.description}>
-          잇득은 현재 음식점 사장님들의 관심을 확인하고 있어요. 정식 계약이 아닌, 간단한 사전등록 설문부터 시작합니다.
+          사장님이 빈 시간대를 골라 메뉴와 포인트 적립 혜택을 등록하면, 대학가 상권에 메뉴를 알리고 매장 방문을 유도하는 구조를 준비하고 있어요.
         </Text>
       </View>
 
       <View style={styles.summaryCard}>
-        <Text style={styles.summaryEyebrow}>지금 할 수 있는 일</Text>
-        <Text style={styles.summaryTitle}>사전등록 설문 참여</Text>
+        <Text style={styles.summaryEyebrow}>현재 진행 중인 단계</Text>
+        <Text style={styles.summaryTitle}>우리 가게 사전등록</Text>
         <Text style={styles.summaryDescription}>
-          Google 설문을 통해 우리 가게의 참여 의향을 전달해 주세요. 추후 서비스 방향을 정하는 데 참고합니다.
+          아직 메뉴 등록과 타임세일 운영 기능은 열려 있지 않아요. Google 설문으로 매장 상황과 참여 의향을 알려주시면 서비스 검증에 참고하겠습니다.
         </Text>
         <CtaButton label="사전등록 설문 작성하기" theme="white" />
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionEyebrow}>PROCESS</Text>
-        <Text style={styles.sectionTitle}>참여는 이렇게 진행돼요</Text>
+        <Text style={styles.sectionTitle}>정식 서비스의 이용 흐름</Text>
         <View style={styles.processCard}>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>1</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>설문 참여</Text>
-              <Text style={styles.processText}>가게 정보와 잇득 참여 의향을 작성합니다.</Text>
+              <Text style={styles.processTitle}>한가한 시간대 지정</Text>
+              <Text style={styles.processText}>매장에 방문이 뜸한 시간대를 직접 선택합니다.</Text>
             </View>
           </View>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>2</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>수요 및 의견 확인</Text>
-              <Text style={styles.processText}>서비스 운영에 필요한 사장님들의 의견을 모읍니다.</Text>
+              <Text style={styles.processTitle}>메뉴·포인트 혜택 등록</Text>
+              <Text style={styles.processText}>특정 시간에 제공할 메뉴와 적립 혜택을 등록합니다.</Text>
             </View>
           </View>
           <View style={styles.processRow}>
             <View style={styles.processNumber}><Text style={styles.processNumberText}>3</Text></View>
             <View style={styles.processBody}>
-              <Text style={styles.processTitle}>운영 방식 구체화</Text>
-              <Text style={styles.processText}>조사 결과를 바탕으로 향후 참여 절차와 혜택을 검토합니다.</Text>
+              <Text style={styles.processTitle}>대학가 상권에 노출</Text>
+              <Text style={styles.processText}>잇득에서 등록한 메뉴를 알리고 오프라인 방문을 유도합니다.</Text>
             </View>
           </View>
         </View>
+        <Text style={styles.processCaveat}>※ 위 내용은 준비 중인 운영 구상이며, 현재는 사전등록 설문만 진행하고 있습니다.</Text>
       </View>
 
       <View style={styles.section}>
@@ -99,16 +112,16 @@ export default function GuideScreen() {
       </View>
 
       <View style={styles.bottomCard}>
-        <Text style={styles.bottomTitle}>우리 가게도 잇득과 함께할까요?</Text>
-        <Text style={styles.bottomDescription}>사장님의 의견이 잇득의 다음 단계를 만드는 데 도움이 됩니다.</Text>
-        <CtaButton label="사장님 혜택 신청하기" />
+        <Text style={styles.bottomTitle}>한산한 시간, 잇득과 함께 준비해요</Text>
+        <Text style={styles.bottomDescription}>대학가 상권에서 빈 시간대 유입을 고민하고 있다면 사전등록 설문으로 의견을 남겨주세요.</Text>
+        <CtaButton label="우리 가게 사전등록하기" />
         <Text style={styles.disclaimer}>외부 Google 설문으로 이동합니다. 설문 제출은 입점 확정이 아닙니다.</Text>
       </View>
 
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
-        <Text style={styles.footerText}>먹을수록 쌓인다.</Text>
-        <Text style={styles.footerNote}>현재 서비스 준비 및 수요 검증 중입니다.</Text>
+        <Text style={styles.footerText}>빈 시간을 기회로.</Text>
+        <Text style={styles.footerNote}>현재 타임세일 운영 전 수요 검증 단계입니다.</Text>
       </View>
     </PageScrollView>
   );
@@ -127,6 +140,7 @@ const styles = StyleSheet.create({
   sectionEyebrow: { color: BrandColors.primary, fontSize: 12, letterSpacing: 1.1, fontWeight: '900' },
   sectionTitle: { color: BrandColors.text, fontSize: 24, letterSpacing: -0.5, fontWeight: '900', marginTop: 10 },
   processCard: { padding: 20, backgroundColor: BrandColors.surface, borderRadius: Layout.cardRadius, marginTop: 20, gap: 22 },
+  processCaveat: { color: BrandColors.textMuted, fontSize: 11, lineHeight: 18, marginTop: 12 },
   processRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 13 },
   processNumber: { width: 34, height: 34, borderRadius: 12, backgroundColor: '#FFFFFF', alignItems: 'center', justifyContent: 'center' },
   processNumberText: { color: BrandColors.primary, fontSize: 15, fontWeight: '900' },

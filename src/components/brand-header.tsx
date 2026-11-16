@@ -10,7 +10,7 @@ export function BrandHeader() {
       </View>
       <View>
         <Text style={styles.logoText}>잇득</Text>
-        <Text style={styles.slogan}>먹을수록 쌓인다.</Text>
+        <Text style={styles.slogan}>빈 시간을 기회로.</Text>
       </View>
     </View>
   );

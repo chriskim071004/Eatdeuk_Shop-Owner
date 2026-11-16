@@ -1,26 +1,38 @@
 # 잇득 사장님 랜딩페이지 (Eatdeuk Shop Owner)
 
-음식점 사장님의 초기 참여 의향을 확인하기 위한 **잇득 B2B 웹 프리토타입**입니다. 실제 가입, 쿠폰 발급, 포인트 적립, 대시보드 및 결제 기능은 구현하지 않았습니다.
+대학가 상권의 음식점 사장님을 대상으로 **오프라인 타임세일** 아이디어의 참여 수요를 검증하는 B2B 웹 프리토타입입니다.
 
-## 기술 구성
+## 서비스 구상 (현재 미운영)
 
-기존 [소비자용 잇득 랜딩페이지](https://github.com/machdid9un/eatdeuk-pretotyping)를 기준으로 만든 Expo Router + React Native Web + TypeScript 프로젝트입니다.
+1. 사장님이 방문이 뜸한 **한산한 시간대**를 정합니다.
+2. 그 시간에 운영할 **특정 메뉴와 포인트 적립 혜택**을 잇득에 등록합니다.
+3. 잇득은 해당 메뉴를 **대학가 상권에 알리고 오프라인 매장 방문을 유도**하는 플랫폼을 지향합니다.
 
-- 브랜드 파란색: `#126BFF`
-- 모바일 우선 화면 구성, 콘텐츠 최대 너비 720px
-- 탭: 홈(`/`), 입점 안내(`/guide`)
-- 로그인·사전등록·혜택 신청 버튼은 모두 사장님용 Google 설문으로 이동합니다.
+매장 홍보, 타임세일 메뉴 등록, 회원 로그인, 포인트 적립/정산 기능은 **아직 실제로 제공되지 않습니다.** 성과나 유입을 보장하지 않습니다.
+
+## 사전등록 설문
+
 - **사장님용 설문:** https://forms.gle/2RmtbgTqBsGG73Sb6
-- 소비자용 설문 링크는 사용하지 않습니다.
+- 홈/입점 안내의 CTA와 로그인 버튼은 모두 위 설문으로 이동합니다.
+- 실제 입점 계약, 수수료, 운영 시간 및 초기 등록 혜택은 확정 전입니다.
 
-## 실행
+## 기술 스택 / 디자인
+
+기존 [잇득 소비자 랜딩 코드](https://github.com/machdid9un/eatdeuk-pretotyping)를 참고해 작성한 **Expo Router + React Native Web + TypeScript**입니다.
+
+- 브랜드 색상: `#126BFF`
+- 모바일 우선, 최대 콘텐츠 너비 720px
+- 페이지: `/`(홈) / `/guide`(입점 안내)
+- 정적 사이트 빌드: `npm run build:web`
+
+## 로컬 개발
 
 ```bash
 npm install
 npm run web
 ```
 
-## 정적 빌드 및 검사
+검증/빌드:
 
 ```bash
 npm run lint
@@ -28,19 +40,15 @@ npm run typecheck
 npm run build:web
 ```
 
-## Vercel 배포
+## Vercel
 
-1. 이 저장소 `chriskim071004/Eatdeuk_Shop-Owner`를 Vercel의 새로운 프로젝트에 연결합니다.
-2. Framework Preset은 Expo/Other 중 자동 설정에 맞게 사용하고, `vercel.json`에 지정된 빌드 명령(`npm run build:web`)과 출력 폴더(`dist`)를 유지합니다.
-3. `main` 브랜치 변경 시 자동 배포되도록 연결합니다.
+이 저장소의 `main` 브랜치를 Vercel 프로젝트에 연결합니다. `vercel.json`에서 빌드 명령 `npm run build:web`, 배포 디렉터리 `dist`를 설정했습니다.
 
-> **주의:** 현재 사장님 설문의 실제 문항 및 제출 상태는 이 저장소에서 검증하지 않았습니다. 광고 집행 전 설문이 정상 열리고 제출되는지 직접 확인하세요. 메타 픽셀/전환 추적은 아직 구성하지 않았습니다. 픽셀 ID와 개인정보 처리 방침을 확정한 뒤 별도로 연동해야 합니다.
+## 수정 위치
 
-## 수정할 곳
+- 핵심 문구 및 서비스 흐름: `src/app/(tabs)/index.tsx`
+- 운영 방식과 FAQ: `src/app/(tabs)/guide.tsx`
+- 사장님용 브랜드 태그라인: `src/components/brand-header.tsx`
+- 설문 링크: `src/constants/links.ts`
 
-- 설문 주소: `src/constants/links.ts`
-- 브랜드 색상/화면 규격: `src/constants/brand.ts`
-- 홈 카피 및 카드: `src/app/(tabs)/index.tsx`
-- 입점 안내/FAQ: `src/app/(tabs)/guide.tsx`
-
-**Pretotyping 고지:** 실제 사장님 혜택과 이용요금, 매장 등록 절차는 아직 확정되지 않았으며, 사전등록은 입점 확정이 아닙니다.
+> **Pretotype 고지:** 기능·조건·혜택은 구상 단계이며, 실제 제공되는 것으로 오인되지 않게 해야 합니다. 메타 픽셀/전환 추적은 아직 미설정 상태입니다.

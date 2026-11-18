@@ -20,7 +20,8 @@
 
 기존 [잇득 소비자 랜딩 코드](https://github.com/machdid9un/eatdeuk-pretotyping)를 참고해 작성한 **Expo Router + React Native Web + TypeScript**입니다.
 
-- 브랜드 색상: `#126BFF`
+- 공식 Figma 로고 기반 브랜드 컬러: 초콜릿 브라운 `#5A2E1A`, 옐로우 `#FFD43B` (Figma node `11:215`).
+- 랜딩페이지 적용: 브라운 배너와 버튼, 노란 포인트 CTA 및 배지, 따뜻한 아이보리 배경
 - 모바일 우선, 최대 콘텐츠 너비 720px
 - 페이지: `/`(홈) / `/guide`(입점 안내)
 - 정적 사이트 빌드: `npm run build:web`

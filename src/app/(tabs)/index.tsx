@@ -48,6 +48,7 @@ export default function HomeScreen() {
           <Text style={styles.badgeText}>대학가 음식점 사장님을 위한 오프라인 타임세일</Text>
         </View>
         <Text style={styles.heroEyebrow}>OFFLINE TIME SALE · CAMPUS AREA</Text>
+        <View style={styles.heroAccentLine} />
         <Text style={styles.heroTitle}>비어있는 시간,{'\n'}매출의 기회로.</Text>
         <Text style={styles.heroDescription}>
           손님이 적은 시간대, 비어 있는 테이블이 아쉬우셨나요?{'\n'}잇득과 함께 새로운 고객을 만날 기회를 만들어보세요.
@@ -157,6 +158,7 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     letterSpacing: 1.1,
   },
+  heroAccentLine: { width: 58, height: 5, marginTop: 16, borderRadius: 100, backgroundColor: BrandColors.accent },
   heroTitle: {
     marginTop: 12,
     fontSize: 34,
@@ -179,11 +181,11 @@ const styles = StyleSheet.create({
     backgroundColor: BrandColors.primary,
   },
   mainCardTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  cardPill: { paddingVertical: 7, paddingHorizontal: 10, backgroundColor: '#FFFFFF29', borderRadius: 100 },
-  cardPillText: { color: '#FFFFFF', fontSize: 10, fontWeight: '900', letterSpacing: 0.9 },
-  cardMark: { color: '#DDE9FF', fontSize: 15, fontWeight: '900' },
-  mainCardTitle: { marginTop: 26, color: '#FFFFFF', fontSize: 30, lineHeight: 39, fontWeight: '900', letterSpacing: -0.6 },
-  mainCardDescription: { marginTop: 13, marginBottom: 24, color: '#E3EDFF', fontSize: 14, lineHeight: 23 },
+  cardPill: { paddingVertical: 7, paddingHorizontal: 10, backgroundColor: BrandColors.accent, borderRadius: 100 },
+  cardPillText: { color: BrandColors.primary, fontSize: 10, fontWeight: '900', letterSpacing: 0.9 },
+  cardMark: { color: BrandColors.accent, fontSize: 15, fontWeight: '900' },
+  mainCardTitle: { marginTop: 26, color: '#FFF8E8', fontSize: 30, lineHeight: 39, fontWeight: '900', letterSpacing: -0.6 },
+  mainCardDescription: { marginTop: 13, marginBottom: 24, color: '#F5E6D6', fontSize: 14, lineHeight: 23 },
   section: { marginTop: 57 },
   sectionEyebrow: { color: BrandColors.primary, fontSize: 12, fontWeight: '900', letterSpacing: 1.0 },
   sectionTitle: { marginTop: 9, color: BrandColors.text, fontSize: 25, fontWeight: '900', lineHeight: 34, letterSpacing: -0.6 },

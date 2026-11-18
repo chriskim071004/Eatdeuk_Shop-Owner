@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 14,
-    backgroundColor: BrandColors.primary,
+    backgroundColor: BrandColors.accent,
   },
   logoMarkText: {
-    color: '#FFFFFF',
+    color: BrandColors.primary,
     fontSize: 22,
     fontWeight: '900',
   },

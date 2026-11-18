@@ -3,7 +3,7 @@ import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { BrandColors } from '@/constants/brand';
 import { OWNER_INTEREST_FORM_URL } from '@/constants/links';
 
-type ButtonTheme = 'blue' | 'white' | 'outline';
+type ButtonTheme = 'primary' | 'white' | 'outline';
 
 interface CtaButtonProps {
   label: string;
@@ -11,7 +11,7 @@ interface CtaButtonProps {
   small?: boolean;
 }
 
-export function CtaButton({ label, theme = 'blue', small = false }: CtaButtonProps) {
+export function CtaButton({ label, theme = 'primary', small = false }: CtaButtonProps) {
   const openForm = () => {
     void Linking.openURL(OWNER_INTEREST_FORM_URL);
   };
@@ -20,11 +20,11 @@ export function CtaButton({ label, theme = 'blue', small = false }: CtaButtonPro
     <Pressable
       accessibilityRole="link"
       accessibilityLabel={label}
-      accessibilityHint="잇득 사장님 사전등록 Google 설문으로 이동합니다"
+      accessibilityHint="잇득 사장님 입점 신청 설문으로 이동합니다"
       onPress={openForm}
       style={({ pressed }) => [
         styles.button,
-        theme === 'blue' && styles.blue,
+        theme === 'primary' && styles.primary,
         theme === 'white' && styles.white,
         theme === 'outline' && styles.outline,
         small && styles.small,
@@ -32,7 +32,7 @@ export function CtaButton({ label, theme = 'blue', small = false }: CtaButtonPro
       ]}>
       <Text style={[
         styles.text,
-        theme === 'blue' && styles.blueText,
+        theme === 'primary' && styles.primaryText,
         theme === 'white' && styles.whiteText,
         theme === 'outline' && styles.outlineText,
         small && styles.smallText,
@@ -42,7 +42,7 @@ export function CtaButton({ label, theme = 'blue', small = false }: CtaButtonPro
           aria-hidden
           style={[
             styles.arrow,
-            theme === 'blue' && styles.blueText,
+            theme === 'primary' && styles.primaryText,
             theme === 'white' && styles.whiteText,
             theme === 'outline' && styles.outlineText,
           ]}>↗</Text>
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 12,
   },
-  blue: {
+  primary: {
     backgroundColor: BrandColors.primary,
   },
   white: {
-    backgroundColor: BrandColors.background,
+    backgroundColor: BrandColors.accent,
   },
   outline: {
     backgroundColor: BrandColors.background,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
   },
   text: { fontSize: 16, fontWeight: '800' },
-  blueText: { color: '#FFFFFF' },
+  primaryText: { color: BrandColors.accent },
   whiteText: { color: BrandColors.primary },
   outlineText: { color: BrandColors.text },
   smallText: { fontSize: 14 },

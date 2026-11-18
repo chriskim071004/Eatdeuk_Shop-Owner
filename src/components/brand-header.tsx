@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { BrandColors } from '@/constants/brand';
 
 export function BrandHeader() {
   return (
     <View style={styles.brandRow}>
-      <View style={styles.logoMark}>
-        <Text style={styles.logoMarkText}>잇</Text>
-      </View>
+      <Image
+        accessibilityLabel="잇득 공식 로고"
+        source={require('../../assets/eatdeuk-logo.png')}
+        style={styles.logoImage}
+        resizeMode="contain"
+      />
       <View>
         <Text style={styles.logoText}>잇득</Text>
         <Text style={styles.slogan}>대학가 오프라인 타임세일</Text>
@@ -22,18 +25,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 11,
   },
-  logoMark: {
-    width: 44,
-    height: 44,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 14,
-    backgroundColor: BrandColors.accent,
-  },
-  logoMarkText: {
-    color: BrandColors.primary,
-    fontSize: 22,
-    fontWeight: '900',
+  logoImage: {
+    width: 48,
+    height: 48,
+    borderRadius: 13,
   },
   logoText: {
     color: BrandColors.text,

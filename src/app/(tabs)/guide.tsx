@@ -16,27 +16,27 @@ export function generateMetadata(): Metadata {
 const faqs = [
   {
     question: '잇득은 어떤 서비스인가요?',
-    answer: '음식점이 손님이 적은 시간대에 메뉴와 포인트 적립 혜택을 설정하고 대학가 상권에 매장을 알리는 오프라인 타임세일 서비스입니다. 실제 운영 기능은 준비 중입니다.',
+    answer: '음식점이 손님이 적은 시간대에 특정 메뉴와 포인트 적립 혜택을 설정하고, 대학가 상권에 매장을 알리는 오프라인 타임세일 서비스입니다.',
   },
   {
     question: '어떤 시간대에 활용할 수 있나요?',
-    answer: '사장님이 매장 방문이 적은 시간대를 직접 선택하는 방식을 준비하고 있습니다. 운영 가능한 시간과 조건은 아직 확정되지 않았습니다.',
+    answer: '사장님이 매장 상황에 맞춰 손님이 적은 시간대를 선택하고, 해당 시간에 메뉴 혜택을 운영하는 방식입니다.',
   },
   {
     question: '메뉴와 포인트는 어떻게 등록하나요?',
-    answer: '메뉴와 포인트 적립 조건을 설정하는 기능은 준비 중입니다. 현재는 입점 신청서를 통해 참여 의향을 알려주실 수 있습니다.',
+    answer: '타임세일에 활용할 메뉴와 포인트 적립 조건을 사장님이 정하는 구조입니다.',
   },
   {
     question: '대학가 홍보는 어떻게 진행되나요?',
-    answer: '대학가 상권에 잇득의 타임세일 메뉴를 알리는 방향입니다. 구체적인 홍보 채널과 노출 방식은 아직 확정되지 않았습니다.',
+    answer: '대학가 상권을 중심으로 등록된 타임세일 메뉴와 매장을 소개하고, 오프라인 방문을 유도하는 방식입니다.',
   },
   {
-    question: '입점 신청하면 바로 이용할 수 있나요?',
-    answer: '현재는 실제 메뉴 등록과 포인트 운영 전 단계입니다. 신청서 제출만으로 입점이나 계약이 확정되지 않으며, 다음 절차는 추후 안내됩니다.',
+    question: '입점 신청은 어떻게 진행되나요?',
+    answer: '입점 신청 버튼을 누르면 참여 의향을 남기는 Google 설문이 열립니다. 설문 제출만으로 매장 등록이나 서비스 이용이 시작되지는 않습니다.',
   },
   {
     question: '입점 신청에 비용이 있나요?',
-    answer: '입점 신청서 제출만으로 결제나 계약은 진행되지 않습니다. 실제 서비스 이용요금과 수수료는 아직 확정되지 않았습니다.',
+    answer: '입점 신청 설문 작성만으로 결제나 계약이 진행되지는 않습니다.',
   },
 ] as const;
 
@@ -57,7 +57,7 @@ export default function GuideScreen() {
         <Text style={styles.summaryEyebrow}>잇득 입점 안내</Text>
         <Text style={styles.summaryTitle}>우리 가게 입점 신청</Text>
         <Text style={styles.summaryDescription}>
-          오프라인 타임세일에 관심이 있다면 입점 신청서를 작성해 주세요. 현재 신청서를 통해 참여 의향을 확인하고 있으며, 메뉴 등록 기능은 준비 중입니다.
+          우리 가게에 맞는 타임세일과 대학가 상권 홍보에 관심이 있다면 입점 신청서를 작성해 주세요.
         </Text>
         <CtaButton label="입점 신청서 작성하기" theme="white" />
       </View>
@@ -88,7 +88,6 @@ export default function GuideScreen() {
             </View>
           </View>
         </View>
-        <Text style={styles.processCaveat}>※ 위 단계는 준비 중인 이용 방식이며, 현재는 입점 신청 설문만 받고 있습니다.</Text>
       </View>
 
       <View style={styles.section}>
@@ -116,7 +115,6 @@ export default function GuideScreen() {
       <View style={styles.footer}>
         <Text style={styles.footerBrand}>잇득</Text>
         <Text style={styles.footerText}>대학가 오프라인 타임세일</Text>
-        <Text style={styles.footerNote}>실제 메뉴 등록·포인트 적립 기능은 준비 중입니다.</Text>
       </View>
     </PageScrollView>
   );
@@ -135,7 +133,6 @@ const styles = StyleSheet.create({
   sectionEyebrow: { color: BrandColors.primary, fontSize: 12, letterSpacing: 1.1, fontWeight: '900' },
   sectionTitle: { color: BrandColors.text, fontSize: 24, letterSpacing: -0.5, fontWeight: '900', marginTop: 10 },
   processCard: { padding: 20, backgroundColor: BrandColors.surface, borderRadius: Layout.cardRadius, marginTop: 20, gap: 22 },
-  processCaveat: { color: BrandColors.textMuted, fontSize: 11, lineHeight: 18, marginTop: 12 },
   processRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 13 },
   processNumber: { width: 34, height: 34, borderRadius: 12, backgroundColor: '#FFFFFF', alignItems: 'center', justifyContent: 'center' },
   processNumberText: { color: BrandColors.primary, fontSize: 15, fontWeight: '900' },
@@ -154,5 +151,4 @@ const styles = StyleSheet.create({
   footer: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', columnGap: 9, rowGap: 8, marginTop: 49, borderTopColor: BrandColors.border, borderTopWidth: 1, paddingTop: 20 },
   footerBrand: { fontSize: 14, fontWeight: '900', color: BrandColors.text },
   footerText: { fontSize: 12, color: BrandColors.textMuted },
-  footerNote: { fontSize: 11, color: BrandColors.textMuted, width: '100%' },
 });
